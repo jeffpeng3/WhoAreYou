@@ -1,0 +1,20 @@
+[project]
+name = "whoareyou"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "jeff", email = "jeffpeng2012@gmail.com" }
+]
+dependencies = [
+    "fastapi>=0.111.0",
+    "hypercorn>=0.17.3",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.scripts]
+"whoareyou" = "whoareyou:main"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
