@@ -7,4 +7,4 @@ COPY --from=builder /root/.local /root/.local
 COPY app.py /app/app.py
 COPY static /app/static
 WORKDIR /app
-CMD ["hypercorn", "app:app", "--bind", "0.0.0.0:80","--bind","0.0.0.0:443"]
+CMD ["python3" ,"-m" , "hypercorn", "app:app", "--bind", "0.0.0.0:80","--bind","0.0.0.0:443"]
